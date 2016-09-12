@@ -1,6 +1,6 @@
 function flappyAwood(startRightAway) {
-    var $window = $('.rebl-panel .container.game-FlappyAwood .window'),
-            $bird = $('.rebl-panel .container.game-FlappyAwood .bird'),
+    var $window = $('.window'),
+            $bird = $('.bird'),
             fallTime = 1000,
             gapHeight = 200,
             gameState = 2,
@@ -17,7 +17,7 @@ function flappyAwood(startRightAway) {
 
     function switchBird() {
         var src = awoods[Math.floor(Math.random() * awoods.length)];
-        $('.rebl-panel .container.game-FlappyAwood .bird').css('background', 'url(' + src + ')');
+        $('.bird').css('background', 'url(' + src + ')');
     }
     switchBird();
 
@@ -52,7 +52,7 @@ function flappyAwood(startRightAway) {
         //birdFlap();
         e.preventDefault();
         if(gameState === 2){
-            $('.rebl-panel .container.game-FlappyAwood .info').text('');
+            $('.info').text('');
             gameState = 1;
             deleteInterval();
         } else if (gameState === 0) {
@@ -107,11 +107,11 @@ function flappyAwood(startRightAway) {
     }
 
     function deletePipe(){
-        $('.rebl-panel .container.game-FlappyAwood .window .pipe').first().remove();
+        $('.window .pipe').first().remove();
     }
 
     function movePipes(){
-        $('.rebl-panel .container.game-FlappyAwood .pipe').each(function(){
+        $('.pipe').each(function(){
             $(this).animate({
                 right: '+=160px'
             }, 1300, 'linear');
@@ -124,17 +124,17 @@ function flappyAwood(startRightAway) {
             gameEnd();
         }
 
-        curPipe = $('.rebl-panel .container.game-FlappyAwood .pipe:nth-of-type(4)');
+        curPipe = $('.pipe:nth-of-type(4)');
         if(curPipe.length > 0){
-            pipeTop = $('.rebl-panel .container.game-FlappyAwood .pipe:nth-of-type(4) .topHalf');
-            pipeBottom = $('.rebl-panel .container.game-FlappyAwood .pipe:nth-of-type(4) .bottomHalf');
+            pipeTop = $('.pipe:nth-of-type(4) .topHalf');
+            pipeBottom = $('.pipe:nth-of-type(4) .bottomHalf');
             if(($bird.offset().left + $bird.width()) >= curPipe.offset().left && $bird.offset().left <= (curPipe.offset().left + curPipe.width())){
                 if($bird.offset().top < (curPipe.offset().top + pipeTop.height()) || ($bird.offset().top + $bird.height()) > ((curPipe.offset().top + pipeTop.height()) +   gapHeight)){
                     console.log('HIT PIPE');
                     gameEnd();
                 }
             } else if($bird.offset().left >= (curPipe.offset().left + curPipe.width())){
-                $('.rebl-panel .container.game-FlappyAwood .score').text(curPipe.attr('pipe-id'));
+                $('.score').text(curPipe.attr('pipe-id'));
             }
         }
     }
@@ -144,12 +144,12 @@ function flappyAwood(startRightAway) {
         clearInterval(int);
         clearInterval(int2);
         clearTimeout(deleteTimeout);
-        $('.rebl-panel .container.game-FlappyAwood .pipe').stop();
-        $('.rebl-panel .container.game-FlappyAwood .info').html('Game Over!<' + 'br>');
+        $('.pipe').stop();
+        $('.info').html('Game Over!<' + 'br>');
         if (isMobile) {
-            $('.rebl-panel .container.game-FlappyAwood .info').append('Tap To Restart');
+            $('.info').append('Tap To Restart');
         } else {
-            $('.rebl-panel .container.game-FlappyAwood .info').append('Click/Space To Restart');
+            $('.info').append('Click/Space To Restart');
         }
         gravity();
         gameState = 0;
