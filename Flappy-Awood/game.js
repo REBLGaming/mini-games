@@ -165,7 +165,7 @@ function flappyAwood(startRightAway) {
 		    success: function() {
 		    	canRestartGame = true;
 		    },
-		    data: parseInt($('.score').text()),
+		    data: $('.score').text(),
 		    contentType: 'application/json'
 	  	})
        	    } else {
