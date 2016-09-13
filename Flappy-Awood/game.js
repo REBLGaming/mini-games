@@ -1,6 +1,7 @@
 var isMobile = false;
 var userId;
 var canRestartGame = false;
+var leaderSaved = false;
 
 window.onmessage = function(e){
     var data = JSON.parse(e.data);
@@ -165,15 +166,18 @@ function flappyAwood(startRightAway) {
 		    url: 'https://flappy-awood.firebaseio.com/leaderboards/' + userId + '.json',
 		    type: 'PUT',
 		    success: function() {
-		    	canRestartGame = true;
+		    	leaderSaved = true;
 		    },
 		    data: $('.score').text(),
 		    contentType: 'application/json'
 	  	})
        	    } else {
-       	    	canRestartGame = true;
+       	    	leaderSaved = true;
        	    }
         });
+        setTimeout(function() {
+	    canRestartGame = true;
+        }, 1000);
       }
       
       function restartGame() {
@@ -184,4 +188,5 @@ function flappyAwood(startRightAway) {
     })
 }
 
+window.top.postMessage('hello', '*');
 new flappyAwood();
