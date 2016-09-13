@@ -15,7 +15,7 @@ function flappyAwood(startRightAway) {
 	  $window = $('.window'),
 	  $bird = $('.bird'),
       fallTime = 1000,
-      gapHeight = 120,
+      gapHeight = 200,
       gameState = 2,
       pipeId = 0,
       awoods = [
