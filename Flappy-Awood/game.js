@@ -1,3 +1,9 @@
+var isMobile = false;
+
+window.onmessage = function(e){
+    isMobile = e.isMobile;
+}
+
 function flappyAwood(startRightAway) {
     var $window = $('.window'),
             $bird = $('.bird'),
