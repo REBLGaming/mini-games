@@ -1,4 +1,5 @@
 var isMobile = false;
+var canRestartGame = false;
 
 window.onmessage = function(e){
     isMobile = e.isMobile;
@@ -153,10 +154,15 @@ function flappyAwood(startRightAway) {
         } else {
             $('.info').append('Click/Space To Restart');
         }
+        setTimeout(function() {
+            canRestartGame = true;
+        }, 1000);
       }
       
       function restartGame() {
+      	if (canRestartGame) {
           window.location.reload();
+      	}
       }
     })
 }
