@@ -2,6 +2,12 @@ var isMobile = false;
 
 window.onmessage = function(e){
     isMobile = e.isMobile;
+    
+    if (isMobile) {
+    	$('.info').text('Tap To Begin');
+    } else {
+    	$('.info').text('Click/Space To Begin');
+    }
 }
 
 function flappyAwood(startRightAway) {
