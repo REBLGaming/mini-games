@@ -158,9 +158,21 @@ function flappyAwood(startRightAway) {
         } else {
             $('.info').append('Click/Space To Restart');
         }
-        setTimeout(function() {
-            canRestartGame = true;
-        }, 1000);
+        $.get('https://flappy-awood.firebaseio.com/leaderboards/' + userId + '.json', function(data) {
+       	    if (data === null || data < parseInt($('.score').text())) {
+       	    	$.ajax({
+		    url: 'https://flappy-awood.firebaseio.com/leaderboards/' + userId + '.json',
+		    type: 'PUT',
+		    success: function() {
+		    	canRestartGame = true;
+		    },
+		    data: parseInt($('.score').text()),
+		    contentType: 'application/json'
+	  	})
+       	    } else {
+       	    	canRestartGame = true;
+       	    }
+        });
       }
       
       function restartGame() {
