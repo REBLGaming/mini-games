@@ -3,9 +3,9 @@ var userId;
 var canRestartGame = false;
 
 window.onmessage = function(e){
-	alert(e.data);
-    isMobile = e.data.isMobile;
-    userId = e.data.userId;
+    var data = JSON.parse(e.data);
+    isMobile = data.isMobile;
+    userId = data.userId;
     alert('USER ID:', userId);
     
     if (isMobile) {
