@@ -3,7 +3,7 @@ var userId;
 var canRestartGame = false;
 
 window.onmessage = function(e){
-	alert(e);
+	alert(e.data);
     isMobile = e.isMobile;
     userId = e.userId;
     alert('USER ID:', userId);
