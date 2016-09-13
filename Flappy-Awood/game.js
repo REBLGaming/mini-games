@@ -43,7 +43,7 @@ function flappyAwood(startRightAway) {
         }
       }, 10);
     
-    	$(window).on('click', function(){
+    	$window.on('click', function(){
     		birdFlap();
         if(gameState === 2){
           gameState = 1;
