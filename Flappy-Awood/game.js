@@ -50,6 +50,7 @@ function flappyAwood(startRightAway) {
     		birdFlap();
         if(gameState === 2){
           gameState = 1;
+          $('.info').text('');
           deleteInterval();
         } else if (gameState === 0) {
             restartGame();
@@ -62,6 +63,7 @@ function flappyAwood(startRightAway) {
           e.preventDefault();
           if(gameState === 2){
             gameState = 1;
+            $('.info').text('');
             deleteInterval();
           } else if (gameState === 0) {
             restartGame();
