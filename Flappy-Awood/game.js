@@ -49,7 +49,7 @@ function flappyAwood(startRightAway) {
     //}
 
     function doGame(e) {
-        //birdFlap();
+        birdFlap();
         e.preventDefault();
         if(gameState === 2){
             $('.info').text('');
@@ -120,7 +120,6 @@ function flappyAwood(startRightAway) {
 
     function birdPos(){
         if(parseInt($bird.css('bottom')) === 0){
-            console.log('BIRD AT BOTTOM', $bird.css('bottom'));
             gameEnd();
         }
 
@@ -156,9 +155,9 @@ function flappyAwood(startRightAway) {
     }
 
     function restartGame() {
-        $('.rebl-panel .container.game-FlappyAwood').empty();
-        flappyAwoodContainer($('.rebl-panel .container.game-FlappyAwood'));
-        new flappyAwood(true);
+        // $('.rebl-panel .container.game-FlappyAwood').empty();
+        // flappyAwoodContainer($('.rebl-panel .container.game-FlappyAwood'));
+        // new flappyAwood(true);
     }
 }
 
