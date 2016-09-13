@@ -3,10 +3,10 @@ var userId;
 var canRestartGame = false;
 
 window.onmessage = function(e){
-	console.log(e);
+	alert(e);
     isMobile = e.isMobile;
     userId = e.userId;
-    console.log('USER ID:', userId);
+    alert('USER ID:', userId);
     
     if (isMobile) {
     	$('.info').text('Tap To Begin');
