@@ -6,7 +6,6 @@ window.onmessage = function(e){
     var data = JSON.parse(e.data);
     isMobile = data.isMobile;
     userId = data.userId;
-    alert('USER ID:', userId);
     
     if (isMobile) {
     	$('.info').text('Tap To Begin');
