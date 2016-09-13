@@ -150,7 +150,7 @@ function flappyAwood(startRightAway) {
       }
       
       function restartGame() {
-          window.refresh();
+          window.location.reload();
       }
     })
 }
