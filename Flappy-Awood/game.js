@@ -191,4 +191,6 @@ function flappyAwood(startRightAway) {
 }
 
 window.top.postMessage('hello', '*');
-new flappyAwood();
+$(document).ready(function(){
+    new flappyAwood();
+});
