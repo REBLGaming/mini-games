@@ -59,6 +59,17 @@ function flappyAwood(startRightAway) {
             restartGame();
         }
     	});
+    
+    	$window.on('touchstart', function(){
+    		birdFlap();
+        if(gameState === 2){
+          gameState = 1;
+          $('.info').text('');
+          deleteInterval();
+        } else if (gameState === 0) {
+            restartGame();
+        }
+    	});
       
     	$(window).keydown(function(e){
     		if(e.keyCode === 32){
