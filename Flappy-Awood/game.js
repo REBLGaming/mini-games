@@ -26,7 +26,8 @@ function flappyAwood(startRightAway) {
       awoods = [
           'https://s18.postimg.org/58k4u07w9/bird_maga_Sprite.png',
           'https://s15.postimg.org/57vjvg7ln/bird_Sprite.png',
-          'https://s11.postimg.org/ho4pvpser/bird_angry_Sprite.png'
+          'https://s11.postimg.org/ho4pvpser/bird_angry_Sprite.png',
+          'https://s14.postimg.org/ti02a6gs1/bird_blue_Sprite.png'
       ];
     
       function switchBird() {
