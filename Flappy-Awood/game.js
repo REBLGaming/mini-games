@@ -170,10 +170,10 @@ function flappyAwood(startRightAway) {
 		    success: function() {
 		    	leaderSaved = true;
 		    },
-		    data: {
+		    data: JSON.stringify({
 		    	username: user.username,
 		    	score: $('.score').text()
-	    	    },
+	    	    }),
             	    dataType: 'json',
 		    traditional: true,
 		    contentType: 'application/json'
