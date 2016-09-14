@@ -49,6 +49,7 @@ function flappyAwood(startRightAway) {
         }
       }, 10);
     
+    if (!isMobile) {
     	$window.on('click', function(){
     		birdFlap();
         if(gameState === 2){
@@ -59,18 +60,7 @@ function flappyAwood(startRightAway) {
             restartGame();
         }
     	});
-    
-    	$window.on('touchstart', function(){
-    		birdFlap();
-        if(gameState === 2){
-          gameState = 1;
-          $('.info').text('');
-          deleteInterval();
-        } else if (gameState === 0) {
-            restartGame();
-        }
-    	});
-      
+    	
     	$(window).keydown(function(e){
     		if(e.keyCode === 32){
     			birdFlap();
@@ -84,6 +74,18 @@ function flappyAwood(startRightAway) {
           }
     		}
     	});
+    } else {
+    	$window.on('touchstart', function(){
+    		birdFlap();
+        if(gameState === 2){
+          gameState = 1;
+          $('.info').text('');
+          deleteInterval();
+        } else if (gameState === 0) {
+            restartGame();
+        }
+    	});
+    }
     
       function deleteInterval(){
     	  setTimeout(function(){
