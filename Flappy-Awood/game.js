@@ -25,7 +25,8 @@ function flappyAwood(startRightAway) {
       pipeId = 0,
       awoods = [
           'https://s18.postimg.org/58k4u07w9/bird_maga_Sprite.png',
-          'https://s15.postimg.org/57vjvg7ln/bird_Sprite.png'
+          'https://s15.postimg.org/57vjvg7ln/bird_Sprite.png',
+          'https://s11.postimg.org/ho4pvpser/bird_angry_Sprite.png'
       ];
     
       function switchBird() {
