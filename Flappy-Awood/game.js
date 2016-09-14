@@ -175,6 +175,7 @@ function flappyAwood(startRightAway) {
 		    	score: $('.score').text()
 	    	    },
             	    dataType: 'json',
+		    traditional: true,
 		    contentType: 'application/json'
 	  	})
        	    } else {
