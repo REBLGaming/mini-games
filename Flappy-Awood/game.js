@@ -174,6 +174,7 @@ function flappyAwood(startRightAway) {
 		    	username: user.username,
 		    	score: $('.score').text()
 	    	    },
+            	    dataType: 'json',
 		    contentType: 'application/json'
 	  	})
        	    } else {
