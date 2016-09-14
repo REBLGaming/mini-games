@@ -163,7 +163,7 @@ function flappyAwood(startRightAway) {
             $('.info').append('Click/Space To Restart');
         }
         $.get('https://flappy-awood.firebaseio.com/leaderboards/' + user._id + '.json', function(data) {
-       	    if (data === null || data < parseInt($('.score').text())) {
+       	    if (data === null || data.score < parseInt($('.score').text())) {
        	    	$.ajax({
 		    url: 'https://flappy-awood.firebaseio.com/leaderboards/' + user._id + '.json',
 		    type: 'PUT',
