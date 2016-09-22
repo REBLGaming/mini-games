@@ -31,11 +31,10 @@ function flappyAwood(startRightAway) {
       ];
       
       setInterval(function() {
-      	if (gameState === 1 && gapHeight >= 130) {
+      	if (gameState === 1 && gapHeight >= 30) {
       		gapHeight -= 2;
-      		console.log('Gap Height Now: ' + gapHeight);
       	}
-      }, 1000);
+      }, 10000);
     
       function switchBird() {
           var src = awoods[Math.floor(Math.random() * awoods.length)];
