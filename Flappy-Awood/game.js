@@ -33,6 +33,7 @@ function flappyAwood(startRightAway) {
       setInterval(function() {
       	if (gameState === 1 && gapHeight >= 130) {
       		gapHeight -= 2;
+      		console.log('Gap Height Now: ' + gapHeight);
       	}
       }, 1000);
     
