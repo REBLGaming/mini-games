@@ -17,8 +17,8 @@ window.onmessage = function(e){
 
 function flappyAwood(startRightAway) {
     $(function(){
-	  $window = $('.window'),
-	  $bird = $('.bird'),
+      $window = $('.window'),
+      $bird = $('.bird'),
       fallTime = 1000,
       gapHeight = 200,
       gameState = 2,
@@ -29,6 +29,12 @@ function flappyAwood(startRightAway) {
           'https://s11.postimg.org/ho4pvpser/bird_angry_Sprite.png',
           'https://s14.postimg.org/ti02a6gs1/bird_blue_Sprite.png'
       ];
+      
+      setInterval(function() {
+      	if (gameState === 1 && gapHeight >= 130) {
+      		gapHeight -= 2;
+      	}
+      }, 1000);
     
       function switchBird() {
           var src = awoods[Math.floor(Math.random() * awoods.length)];
