@@ -24,10 +24,10 @@ function flappyAwood(startRightAway) {
       gameState = 2,
       pipeId = 0,
       awoods = [
-          'https://s18.postimg.org/58k4u07w9/bird_maga_Sprite.png',
-          'https://s15.postimg.org/57vjvg7ln/bird_Sprite.png',
-          'https://s11.postimg.org/ho4pvpser/bird_angry_Sprite.png',
-          'https://s14.postimg.org/ti02a6gs1/bird_blue_Sprite.png'
+          'http://s16.postimg.org/5kz4h2t3l/bird_maga_Sprite.png',
+          'http://s16.postimg.org/8p9sdv9w1/bird_blue_Sprite.png',
+          'http://s16.postimg.org/vf8x6ut3l/bird_angry_Sprite.png',
+          'http://s16.postimg.org/48hff6vo1/bird_Sprite.png'
       ];
       
       setInterval(function() {
