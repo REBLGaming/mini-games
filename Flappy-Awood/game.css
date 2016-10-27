@@ -65,6 +65,7 @@ p {
     height: 28px;
     width: 40px;
     background: url('https://s15.postimg.org/57vjvg7ln/bird_Sprite.png');
+    background-size: cover;
     position: absolute;
     bottom: 50%;
     left: 130px;
