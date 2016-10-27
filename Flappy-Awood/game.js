@@ -39,6 +39,7 @@ function flappyAwood(startRightAway) {
       function switchBird() {
           var src = awoods[Math.floor(Math.random() * awoods.length)];
           $('.bird').css('background', 'url(' + src + ')');
+          $('.bird').css('background-size', 'cover');
       }
       switchBird();
     
